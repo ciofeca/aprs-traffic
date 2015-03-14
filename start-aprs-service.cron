@@ -1,0 +1,8 @@
+# cron script for user: aprs
+
+# start aprs service at server boot:
+@reboot             /home/aprs/run-aprs-service.sh &> /tmp/run-aprs-service.log
+
+# at 7:01, every day, collect statistics:
+01 07  * * *        /home/aprs/generate-aprs-page.rb /tmp/last-aprs.html &> /tmp/generate-aprs-page.log
+
