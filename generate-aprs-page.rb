@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-EMAILPROG='./email.rb'
+EMAILPROG='../email.rb'
 
 # load symbol table (two letter symbol => static image URI)
 load "#{$0}.symboltable"
