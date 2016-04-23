@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby1.9.1
+#!/usr/bin/env ruby
 
 FROM='some gmail account <i_created_this_only_to_send_a_mail@gmail.com>'
 SMTP='smtp.gmail.com'
@@ -10,7 +10,7 @@ TLSM=true
 ADDR='my.blog.secret.mailtoblog.address@blogger.com'
 
 require 'net/smtp'
-require 'net/smtp-tls'
+require 'net/smtp-tls'  # required for gmail smtp; not available on Ubuntu; must be placed in /usr/lib/ruby/.../net/
 
 if ARGV.size != 1
   STDERR.puts "usage: #{$0} 'subject' < text"
