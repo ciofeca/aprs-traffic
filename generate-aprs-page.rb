@@ -240,10 +240,10 @@ fp.print "<ul><li><b>#{tab.size}</b> different stations</li>"
 fp.print "<li><i>#{perc(nonlocal,tab.size, 'non-local stations')}</i> (more than 100 km from here)"
 fp.print "<br><small><i>(max distance: #{maxkm} km; nearest: #{minkm} km)</i></small></li>"
 fp.print "<li>#{packets} total APRS packets (one every #{ogni} seconds):"
-fp.print "<br>#{'&nbsp'*4}#{perc(cntloc, packets, 'reporting location')}"
-fp.print "<br>#{'&nbsp'*4}#{perc(cntwea, packets, 'reporting weather data')}</li>"
+fp.print "<br>#{'&nbsp;'*4}#{perc(cntloc, packets, 'reporting location')}"
+fp.print "<br>#{'&nbsp;'*4}#{perc(cntwea, packets, 'reporting weather data')}</li>"
 fp.print "<li>packet identification summary:<small>"
-pktype.sort_by { |k,v| v }.reverse.each { |k,v| fp.print "<br>#{'&nbsp'*8}<i>"+perc(v, packets, "</i>#{k}") }
+pktype.sort_by { |k,v| v }.reverse.each { |k,v| fp.print "<br>#{'&nbsp;'*8}<i>"+perc(v, packets, "</i>#{k}") }
 
 # uncomment if you have the "tw" script to tweet on twitter:
 #system "/home/ciofeca/Desktop/tw #{tab.size} stations, #{packets} packets / every #{ogni} seconds, #{cntloc} locations, #{cntwea} weather data"
