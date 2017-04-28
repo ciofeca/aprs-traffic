@@ -50,9 +50,9 @@ while(my $kisspkt = $tnc_kiss->read_kiss_frame())
           # digipeaters require special treatment
           if($k eq 'digipeaters')
           {
-            while(my($kk,$vv) = each $v)
+            while(my($kk,$vv) = each(%v))
             {
-              while(my($kkk,$vvv) = each $vv)
+              while(my($kkk,$vvv) = each(%vv))
               {
                 print OUT "digi_$kk" . "_$kkk\t$vvv\n";
               }
@@ -61,7 +61,7 @@ while(my $kisspkt = $tnc_kiss->read_kiss_frame())
           else
           {
             # wx and capabilities
-            while(my($kk,$vv) = each $v)
+            while(my($kk,$vv) = each(%v))
             {
               print OUT "$k" . "_$kk\t$vv\n";
             }
