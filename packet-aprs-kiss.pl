@@ -1,7 +1,7 @@
 #!/usr/bin/env perl
 
 # requires CPAN libraries:
-#   cpan install Device::TNC::KISS Ham::APRS::FAP
+#   cpan install Date::Calc Device::TNC::KISS Ham::APRS::FAP
 
 use Ham::APRS::FAP qw(parseaprs distance kiss_to_tnc2);
 use Device::TNC::KISS;
